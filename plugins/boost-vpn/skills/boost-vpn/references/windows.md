@@ -38,6 +38,28 @@ readability. A missing PATH entry immediately after installation means the termi
 need reopening; use the absolute path in the same session. Do not reinstall merely to
 refresh PATH. If variables do not persist between tool calls, resolve them again.
 
+## Codex Sandbox Access
+
+On native Windows under a Codex sandbox, run all daemon-backed commands (`nodes`,
+`status`, `connect`, `disconnect`, `login`, `logout`, and `daemon` commands) outside the
+sandbox on their first invocation.
+
+With Codex `exec_command`, use the resolved absolute `boostcli.exe` path and set:
+
+```text
+sandbox_permissions: "require_escalated"
+```
+
+Provide a concise justification describing the requested Boost operation.
+
+This is a sandbox-boundary approval, not Administrator elevation. Do not add the sandbox
+account to the `boostcli` Windows group, restart the service, or reinstall Boost merely
+because an in-sandbox command returns `DAEMON_UNREACHABLE` with
+`Not allowed to reach the Boost service`.
+
+If sandbox escalation is denied or unavailable, stop and tell the user that the current
+permission profile prevents access to the local Boost service. Do not retry repeatedly.
+
 ## Install, Upgrade, and Roll Back
 
 For a planning request, report the detected OS/architecture, official installer URL,
