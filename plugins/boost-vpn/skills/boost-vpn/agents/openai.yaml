@@ -1,0 +1,4 @@
+interface:
+  display_name: "Boost VPN"
+  short_description: "Install and manage Boost VPN from official downloads"
+  default_prompt: "Use $boost-vpn to check my Boost VPN installation and connection status."

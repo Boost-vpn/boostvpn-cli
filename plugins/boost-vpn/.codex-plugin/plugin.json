@@ -1,0 +1,40 @@
+{
+  "name": "boost-vpn",
+  "version": "0.1.0+codex.20260916061717",
+  "description": "Install and operate Boost VPN on macOS, Linux, and Windows using downloads from the official website.",
+  "author": {
+    "name": "Boost",
+    "url": "https://getboost.app"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "Boost VPN",
+    "VPN",
+    "macOS",
+    "Windows",
+    "networking",
+    "installation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Boost VPN",
+    "shortDescription": "Install and use Boost VPN from official downloads.",
+    "longDescription": "Manage Boost VPN installation, QR login, nodes, connections, diagnostics, and removal on macOS, Linux, and Windows. Downloads the current official installer over HTTPS; release archives and SHA256 checksums are fetched at installation time. No installer or release binaries are bundled.",
+    "developerName": "Boost",
+    "category": "Utilities",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://getboost.app",
+    "defaultPrompt": [
+      "Check my Boost VPN installation status.",
+      "Plan a safe Boost VPN installation.",
+      "Show the Boost VPN daemon logs."
+    ],
+    "brandColor": "#1F8A70",
+    "composerIcon": "./assets/boost-vpn.png",
+    "logo": "./assets/boost-vpn.png",
+    "logoDark": "./assets/boost-vpn.png"
+  }
+}
